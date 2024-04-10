@@ -1,0 +1,7 @@
+.dummy{
+	color : black;
+}
+.iconcolorcls{
+	--slds-c-icon-color-foreground : white;
+	--slds-c-icon-color-foreground-default : white;
+}

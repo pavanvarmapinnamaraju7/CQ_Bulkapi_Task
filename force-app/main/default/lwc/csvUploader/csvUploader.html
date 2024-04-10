@@ -1,0 +1,57 @@
+<template>
+    <!--spinner starts here -->
+    <template if:true={showSpinner}>
+    <div class="demo-only" style="position:absolute;left:40em;top:6em;">
+        <div class="slds-spinner_container">
+            <div role="status" class="slds-spinner slds-spinner_small">
+                <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+    </template>
+    <!-- ends here-->
+
+
+    <!-- Toast Message starts here -->
+    <template if:true={showToast}>
+        <div class="slds-align_absolute-center">
+        <div class="slds-notify_container slds-is-relative" style="position: absolute; left : -14em;">
+            <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                <span class="slds-assistive-text">success</span>
+                <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                    <!--<svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+                    </svg>-->
+                    <lightning-icon icon-name="utility:success" size='small' class="iconcolorcls"></lightning-icon>
+                </span>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">The bulk api job has been initiated successfully.</h2>
+                </div>
+                <div class="slds-notify__close">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close">
+                    <!--<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>-->
+                    <lightning-icon icon-name="utility:close" size='small' class="iconcolorcls"></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </template>
+    <!-- ends here-->
+
+      <lightning-card title="File Upload">
+        <lightning-file-upload
+            label="Upload Files"
+            name="fileUploader"
+            accept={acceptedFormats}
+            record-id={recordId}
+            onuploadfinished={handleUploadFinished}>
+        </lightning-file-upload>
+    </lightning-card>
+
+</template>
