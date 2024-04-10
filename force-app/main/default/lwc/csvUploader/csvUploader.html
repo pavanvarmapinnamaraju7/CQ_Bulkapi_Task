@@ -44,14 +44,16 @@
     </template>
     <!-- ends here-->
 
-      <lightning-card title="File Upload">
-        <lightning-file-upload
-            label="Upload Files"
-            name="fileUploader"
-            accept={acceptedFormats}
-            record-id={recordId}
-            onuploadfinished={handleUploadFinished}>
-        </lightning-file-upload>
+      <lightning-card title="Upload CSV To Import Parts" class="cardbordercls">
+        <div class="filecls">
+            <lightning-file-upload
+                label="Upload Files"
+                name="fileUploader"
+                accept={acceptedFormats}
+                record-id={recordId}
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+        </div>
     </lightning-card>
 
 </template>

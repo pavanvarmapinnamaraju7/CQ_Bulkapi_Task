@@ -9,9 +9,7 @@ export default class CsvUploader extends LightningElement {
     @track showSpinner = false;
 
     async handleUploadFinished(event) {
-        // Get the list of uploaded files
         try {
-            debugger;
             const uploadedFiles = event.detail.files;
             let uploadData = [{ fileIdList: [uploadedFiles[0].documentId], objectName: 'SQX_Part__c', operation: 'upsert' }];
             let result = await importBulkdata({ dataWrapperList: uploadData,jsonData :  JSON.stringify(uploadData)})

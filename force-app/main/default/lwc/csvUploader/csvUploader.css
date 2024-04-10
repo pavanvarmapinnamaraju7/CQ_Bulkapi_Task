@@ -5,3 +5,12 @@
 	--slds-c-icon-color-foreground : white;
 	--slds-c-icon-color-foreground-default : white;
 }
+.filecls{
+	position: relative;
+	left: 2em;
+}
+.cardbordercls{
+	--slds-c-card-color-border : 3px solid black;
+	--slds-c-card-footer-color-border :  3px solid black;
+	--slds-c-card-radius-border : 10px;
+}
